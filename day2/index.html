@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head><link rel="stylesheet" 
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QuickNotes</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <header>
@@ -18,6 +20,15 @@
     <main>
       <h2>Hello!</h2>
       <p>Welcome to QuickNotes. Use the About page to learn how it works.</p>
+
+      <form id="note-form">
+        <label for="note-input">New note</label>
+        <input type="text" id="note-input" placeholder="Write a note..." />
+        <button type="submit">Add note</button>
+      </form>
+
+      <p id="note-count">You have 0 notes.</p>
+      <ul id="notes-list"></ul>
     </main>
 
     <footer>
