@@ -1,0 +1,7 @@
+# Day 8 Reflection
+
+**The most difficult concept.** For me it was thinking about concurrency, meaning what happens when two requests touch the same data at the same time. At first I assumed that checking "is this available?" and then saving was enough. It only clicked when I traced a timeline with two users and saw that both could pass the check before either one saved. I overcame it by drawing that timeline by hand, then learning how transactions, locks and constraints close the gap. Rewriting the same example in SQL as one atomic `UPDATE ... WHERE` made the idea concrete, and applying it to the TicketHub seat problem confirmed that I understood it.
+
+**What I would improve in my capstone.** Based on the feedback I received, I would improve the documentation and the way I explain my design decisions. My architecture was clear, but I did not always justify why I chose one approach over another, so I would add explicit trade-offs and back-of-the-envelope estimates. I would also add input validation and clearer error messages, and write more small, meaningful commits so my progress is easier to follow.
+
+**What I will learn next.** I want to go deeper into backend development and databases: building a real API with authentication, practising SQL transactions and indexing, and learning how caching and message queues work in practice. After that I want to learn cloud deployment and testing, so that I can build and run a system that real users depend on.
